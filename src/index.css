@@ -2,11 +2,10 @@
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  color: var(--color-fg);
+  color: #1c0d0f;
 }
 
 @theme {
   --color-primary: #964f52;
   --color-secondary: #f2e8e8;
-  --color-fg: #1c0d0f;
 }
