@@ -12,9 +12,11 @@ export function NamedProductList({
     <>
       <h2 className="text-[1.375rem] font-bold mt-5 mb-3">{title}</h2>
       <div className="flex gap-3 flex-wrap">
-        {products.map((product, index) => (
-          <ProductCard {...product} key={index} />
-        ))}
+        {products.length
+          ? products.map((product, index) => (
+              <ProductCard {...product} key={index} />
+            ))
+          : "No products found."}
       </div>
     </>
   );

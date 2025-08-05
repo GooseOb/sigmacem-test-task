@@ -6,7 +6,7 @@ export function ProductCard({ title, price, images }: Product) {
       <img
         src={images[0]}
         alt=""
-        className="w-full h-48 object-cover rounded-t-lg"
+        className="w-full h-48 object-cover rounded-lg"
       />
       <h2 className="mt-2">{title}</h2>
       <p className="text-primary text-sm mt-1">${price}</p>
