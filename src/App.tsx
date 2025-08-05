@@ -10,7 +10,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useDebouncedState("", 200);
 
   useEffect(() => {
-    fetch(`https://dummyjson.com/products/search?q=${searchTerm}&limit=8`)
+    fetch(`https://dummyjson.com/products/search?q=${searchTerm}&limit=16`)
       .then((res) => res.json())
       .then(({ products }) => {
         setProducts(products);
@@ -24,8 +24,11 @@ function App() {
       </Header>
       <main className="py-5 px-4">
         <div className="max-w-[960px] mx-auto px-4">
-          <NamedProductList products={products} title="Featured Products" />
-          <NamedProductList products={products} title="New Arrivals" />
+          <NamedProductList
+            products={products.slice(0, 8)}
+            title="Featured Products"
+          />
+          <NamedProductList products={products.slice(8)} title="New Arrivals" />
         </div>
       </main>
     </>
